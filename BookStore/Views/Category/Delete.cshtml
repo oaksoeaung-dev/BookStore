@@ -1,0 +1,39 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Category";
+}
+
+<div class="border p-5 rounded-lg shadow-lg max-w-2xl mt-5">
+    <h1 class="text-zinc-900 text-3xl font-semibold my-5">
+        Delete Category
+    </h1>
+    <form method="post" class="space-y-5">
+        <div class="">
+            <label asp-for="Name" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-rectangle-list flex items-center justify-center"></i>
+                </div>
+                <input type="text" disabled asp-for="Name" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Name" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="DisplayOrder" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-input-numeric flex items-center justify-center"></i>
+                </div>
+                <input asp-for="DisplayOrder" type="number" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="DisplayOrder" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div>
+            <a asp-controller="Category" asp-action="Index" class="btn-outline-dark">Back to List</a>
+            <button class="btn-red">Delete</button>
+        </div>
+    </form>
+</div>

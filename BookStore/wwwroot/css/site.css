@@ -1,0 +1,17 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-dark {
+    @apply text-white bg-zinc-900 hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2;
+}
+
+.btn-red {
+    @apply text-white bg-red-600 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2;
+}
+
+
+.btn-outline-dark {
+    @apply text-zinc-900 hover:text-white border border-zinc-800 hover:bg-zinc-900 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center
+}

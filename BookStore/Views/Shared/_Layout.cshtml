@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - BookStore</title>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
+</head>
+<body>
+<header class="container mx-auto">
+    <nav class="bg-white border-zinc-200 border px-5 rounded-lg shadow-lg mt-3">
+        <div class="flex flex-wrap items-center justify-between p-4 md:px-0">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3">
+                <img src="~/images/library.png" class="h-8" alt="Logo"/>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-zinc-900">Book Store</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-500 rounded-lg md:hidden hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-200" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-zinc-100 rounded-lg bg-zinc-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index" class="block py-2 px-3 text-white bg-zinc-900 rounded md:bg-transparent md:text-zinc-900 md:p-0" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Category" asp-action="Index" class="block py-2 px-3 text-zinc-600 rounded hover:bg-zinc-100 md:hover:bg-transparent md:border-0 md:hover:text-zinc-900 md:p-0">Category</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<div class="container mx-auto">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+<script src="~/js/flowbite.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

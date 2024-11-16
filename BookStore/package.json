@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/style.css --minify --watch"
+  },
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
+    "flowbite": "^2.5.2"
+  }
+}

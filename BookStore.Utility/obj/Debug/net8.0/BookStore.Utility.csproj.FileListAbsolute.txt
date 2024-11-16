@@ -1,0 +1,11 @@
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\bin\Debug\net8.0\BookStore.Utility.deps.json
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\bin\Debug\net8.0\BookStore.Utility.dll
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\bin\Debug\net8.0\BookStore.Utility.pdb
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.AssemblyInfoInputs.cache
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.AssemblyInfo.cs
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.dll
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\refint\BookStore.Utility.dll
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\BookStore.Utility.pdb
+C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Utility\obj\Debug\net8.0\ref\BookStore.Utility.dll
