@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Models\\BookStore.Models.csproj": {}
+    "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Models\\BookStore.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Models\\BookStore.Models.csproj": {
+    "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Models\\BookStore.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Models\\BookStore.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Models\\BookStore.Models.csproj",
         "projectName": "BookStore.Models",
-        "projectPath": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Models\\BookStore.Models.csproj",
+        "projectPath": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Models\\BookStore.Models.csproj",
         "packagesPath": "C:\\Users\\Oak Soe Aung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Models\\obj\\",
+        "outputPath": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Models\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -57,6 +57,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

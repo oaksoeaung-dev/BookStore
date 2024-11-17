@@ -1,0 +1,105 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="border p-5 rounded-lg shadow-lg max-w-2xl mt-5">
+    <h1 class="text-zinc-900 text-3xl font-semibold my-5">
+        Delete Product
+    </h1>
+    <form method="post" class="grid grid-cols-2 gap-5">
+        <div class="">
+            <label asp-for="Title" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-heading flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="Title" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Title" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Description" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-poll-h flex items-center justify-center"></i>
+                </div>
+                <input asp-for="Description" type="text" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Description" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="ISBN" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-barcode-read flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="ISBN" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="ISBN" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Author" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-member-list flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="Author" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Author" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="ListPrice" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-usd-circle flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="ListPrice" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="ListPrice" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Price" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="Price" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Price" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Price50" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="Price50" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Price50" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Price100" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                </div>
+                <input type="text" asp-for="Price100" disabled class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+            </div>
+            <span asp-validation-for="Price100" class="text-red-500 font-bold text-sm mt-1"></span>
+        </div>
+
+        <div>
+            <a asp-controller="Product" asp-action="Index" class="btn-outline-dark">Back to List</a>
+            <button class="btn-red">Delete</button>
+        </div>
+    </form>
+</div>

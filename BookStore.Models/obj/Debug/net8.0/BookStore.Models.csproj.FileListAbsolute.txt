@@ -9,3 +9,15 @@ C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Models\obj\Debug\
 C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Models\obj\Debug\net8.0\refint\BookStore.Models.dll
 C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.pdb
 C:\Users\Oak Soe Aung\Development\Learning\BookStore\BookStore.Models\obj\Debug\net8.0\ref\BookStore.Models.dll
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\bin\Debug\net8.0\BookStore.Models.deps.json
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\bin\Debug\net8.0\BookStore.Models.dll
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\bin\Debug\net8.0\BookStore.Models.pdb
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.AssemblyInfoInputs.cache
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.AssemblyInfo.cs
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.csproj.CoreCompileInputs.cache
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.sourcelink.json
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.dll
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\refint\BookStore.Models.dll
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\BookStore.Models.pdb
+C:\Users\Oak Soe Aung\Development\Repository\BookStore\BookStore.Models\obj\Debug\net8.0\ref\BookStore.Models.dll

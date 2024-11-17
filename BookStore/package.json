@@ -3,7 +3,8 @@
     "tailwindcss": "^3.4.14"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/style.css --minify --watch"
+    "dev": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/style.css --minify --watch",
+    "build": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/style.css --minify"
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.3.1",

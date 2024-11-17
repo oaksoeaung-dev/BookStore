@@ -1,0 +1,141 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="border p-5 rounded-lg shadow-lg mt-5">
+    <h1 class="text-zinc-900 text-3xl font-semibold my-5">
+        @(Model.Product.Id != 0 ? "Update Product" : "Create A New Product")
+    </h1>
+    <form method="post" class="grid grid-cols-3 gap-5" enctype="multipart/form-data">
+        <input asp-for="Product.Id" hidden />
+        <input asp-for="Product.ImageUrl" hidden />
+        <div class="col-span-2 space-y-5">
+            <div class="">
+                <label asp-for="Product.Title" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-heading flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.Title" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.Title" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.Description" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute top-2.5 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-poll-h flex items-center justify-center"></i>
+                    </div>
+                    <textarea rows="4" asp-for="Product.Description" type="text" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"></textarea>
+                </div>
+                <span asp-validation-for="Product.Description" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.ISBN" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-barcode-read flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.ISBN" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.ISBN" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.Author" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-member-list flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.Author" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.Author" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.ListPrice" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-usd-circle flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.ListPrice" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.ListPrice" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.Price" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.Price" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.Price" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.Price50" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.Price50" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.Price50" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.Price100" class="block mb-2 text-sm font-medium text-zinc-900"></label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-rr-sack-dollar flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" asp-for="Product.Price100" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full ps-10 p-2.5"/>
+                </div>
+                <span asp-validation-for="Product.Price100" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div>
+                <label asp-for="Product.CategoryId" class="block mb-2 text-sm font-medium text-zinc-900">Category</label>
+                @*<select asp-for="CategoryId" asp-items="ViewBag.CategoryList"  class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full p-2.5">
+                <option selected disabled="">Choose a category</option>
+            </select>*@
+                @*<select asp-for="Product.CategoryId" asp-items="@(ViewData["CategoryList"] as IEnumerable<SelectListItem>)"  class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full p-2.5">
+                <option selected disabled="">Choose a category</option>
+            </select>*@
+
+                <select asp-for="@Model.Product.CategoryId" asp-items="@Model.CategoryList" class="bg-zinc-50 border border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full p-2.5">
+                    <option selected disabled="">Choose a category</option>
+                </select>
+            </div>
+
+            <div class="">
+                <label asp-for="Product.ImageUrl" class="block mb-2 text-sm font-medium text-zinc-900" for="file_input"></label>
+                <input name="file" class="block w-full text-sm text-zinc-900 border border-zinc-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" id="file_input" type="file">
+
+                <span asp-validation-for="Product.ImageUrl" class="text-red-500 font-bold text-sm mt-1"></span>
+            </div>
+
+            <div>
+                <a asp-controller="Product" asp-action="Index" class="btn-outline-dark">Back to List</a>
+                @if (Model.Product.Id != 0)
+                {
+                    <button class="btn-dark">Update</button>
+                }
+                else
+                {
+                    <button class="btn-dark">Create</button>
+                }
+            </div>
+        </div>
+        <div>
+            <img src="~/@Model.Product.ImageUrl" alt="product-image" class="w-full" />
+        </div>
+        
+    </form>
+</div>

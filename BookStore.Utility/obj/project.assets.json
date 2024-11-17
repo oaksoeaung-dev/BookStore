@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Utility\\BookStore.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Utility\\BookStore.Utility.csproj",
       "projectName": "BookStore.Utility",
-      "projectPath": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Utility\\BookStore.Utility.csproj",
+      "projectPath": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Utility\\BookStore.Utility.csproj",
       "packagesPath": "C:\\Users\\Oak Soe Aung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oak Soe Aung\\Development\\Learning\\BookStore\\BookStore.Utility\\obj\\",
+      "outputPath": "C:\\Users\\Oak Soe Aung\\Development\\Repository\\BookStore\\BookStore.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
