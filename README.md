@@ -1,1 +1,0 @@
-Basic CRUD with ASP.Net Core
