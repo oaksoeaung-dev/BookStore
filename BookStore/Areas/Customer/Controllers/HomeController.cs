@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using BookStore.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using BookStore.Models;
 
@@ -8,6 +9,7 @@ namespace BookStore.Areas.Customer.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IUnitOfWork _unitOfWork;
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -16,9 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.Message = "This is ViewBag Message";
-        ViewData["VewDataMessage"] = "This is message from ViewData";
-        TempData["TempDataMessage"] = "This is message from TempData";
+        IEnumerable<Product> products = _unitOfWork.Product.GetAll(includeProperties:"Category"); 
         return View();
     }
 
