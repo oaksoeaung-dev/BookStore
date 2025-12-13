@@ -1,6 +1,6 @@
-using System.Diagnostics;
 using BookStoreWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace BookStoreWeb.Controllers
 {
@@ -8,6 +8,11 @@ namespace BookStoreWeb.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.BagMessage = "Hello I am from ViewBag, Hi!";
+
+            ViewData["DataStore"] = "I came from ViewData, Hola!";
+
+            TempData["TempKey"] = "Hi from TempData, Mingalarpar!";
             return View();
         }
 

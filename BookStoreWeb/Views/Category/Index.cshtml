@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Category";
+}
+@model List<Category>
+
+
+<div class="container">
+    <div class="row g-3">
+        <div class="col-6">
+            <h1>Category List</h1>
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-end">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-dark">
+                <i class="bi bi-plus-circle"></i>
+                Create New Category
+            </a>
+        </div>
+        <div class="col-12">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Category Name</th>
+                        <th scope="col">Display Order</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Model)
+                    {
+                        <tr class="align-middle">
+                            <td>
+                                @category.Name
+                            </td>
+                            <td>
+                                @category.DisplayOrder
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-dark" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-list"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id">Edit</a></li>
+                                        <li>
+                                            <form method="post" hidden asp-controller="Category" asp-action="Delete" id="@category.Id">
+                                                <input hidden name="Id" value="@category.Id" />
+                                            </form>
+                                            <button type="submit" class="dropdown-item" form="@category.Id">Delete</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
