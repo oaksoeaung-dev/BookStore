@@ -1,26 +1,23 @@
 ﻿using BookStore.DataAccess.Data;
+using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using BookStore.Utility.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStoreWeb.Controllers;
+namespace BookStoreWeb.Areas.Admin.Controllers;
 
-public class CategoryController : Controller
+[Area("Admin")]
+public class CategoryController(IUnitOfWork unitOfWork) : Controller
 {
-    private readonly ApplicationDbContext _db;
-    public CategoryController(ApplicationDbContext db)
-    {
-        _db = db;
-    }
 
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
     {
-        var categoryList = await _db.Categories.OrderBy(category => category.DisplayOrder).ToListAsync(cancellationToken);
+        var categoryList = await unitOfWork.CategoryRepository.GetAllAsync(cancellationToken);
         return View(categoryList);
     }
 
-    public async Task<IActionResult> Create()
+    public IActionResult Create()
     {
         return View();
     }
@@ -32,21 +29,23 @@ public class CategoryController : Controller
         if (ModelState.IsValid)
         {
             Category newCategory = Category.Create(category.Name, category.DisplayOrder);
-            await _db.Categories.AddAsync(newCategory, cancellationToken);
-            await _db.SaveChangesAsync(cancellationToken);
+            await unitOfWork.CategoryRepository.AddAsync(newCategory, cancellationToken);
+            await unitOfWork.SaveAsync(cancellationToken);
+            
             TempData["success"] = "Successfully created.";
             return RedirectToAction("Index");
         }
         return View();
     }
 
-    public async Task<IActionResult> Edit(Guid id)
+    public async Task<IActionResult> Edit(Guid id, CancellationToken cancellationToken)
     {
         if (string.IsNullOrEmpty(id.ToString()))
         {
             return NotFound();
         }
-        Category? categoryFromDb = await _db.Categories.FindAsync(id);
+
+        Category? categoryFromDb = await unitOfWork.CategoryRepository.GetAsync(category => category.Id == id, cancellationToken);
         if (categoryFromDb is null)
         {
             return NotFound();
@@ -57,12 +56,12 @@ public class CategoryController : Controller
     [HttpPost]
     public async Task<IActionResult> Edit(Category category, CancellationToken cancellationToken)
     {
-        //ModelState.AddModelError("displayorder", "Hello World");
         if (ModelState.IsValid)
         {
             category.ModifiedAt = DateTime.UtcNow;
-            _db.Categories.Update(category);
-            await _db.SaveChangesAsync(cancellationToken);
+            unitOfWork.CategoryRepository.Update(category);
+            await unitOfWork.SaveAsync(cancellationToken);
+            
             TempData["success"] = "Successfully updated.";
             return RedirectToAction("Index");
         }
@@ -72,14 +71,15 @@ public class CategoryController : Controller
     [HttpPost]
     public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
     {
-        Category? category = await _db.Categories.FindAsync(id, cancellationToken);
+        Category? category = await unitOfWork.CategoryRepository.GetAsync(category => category.Id == id, cancellationToken);
         if (category is not null)
         {
             category.RecordState = RecordState.Deleted;
             category.ModifiedAt = DateTime.UtcNow;
-            _db.Categories.Update(category);
+            unitOfWork.CategoryRepository.Update(category);
+            
             TempData["success"] = "Successfully deleted.";
-            await _db.SaveChangesAsync(cancellationToken);
+            await unitOfWork.SaveAsync(cancellationToken);
         }
         return RedirectToAction("Index");
     }

@@ -34,9 +34,9 @@ namespace BookStore.DataAccess.Migrations
                 columns: new[] { "Id", "CreatedAt", "DisplayOrder", "ModifiedAt", "Name", "RecordState" },
                 values: new object[,]
                 {
-                    { new Guid("019b211e-7d79-725c-b250-47d2dc3f9079"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(917), 1, null, "Action", "Active" },
-                    { new Guid("019b211e-7d79-743b-ba1b-67c50cd3e00d"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1370), 2, null, "Sci-fi", "Active" },
-                    { new Guid("019b211e-7d79-7fc3-bbf8-1b8b29f3fce5"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1372), 3, null, "History", "Active" }
+                    { new Guid("019b27c4-40b0-70c7-8762-3ff661b5ac90"), new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(4911), 1, null, "Action", "Active" },
+                    { new Guid("019b27c4-40b0-73ef-b033-4f48ee3c444f"), new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(5317), 3, null, "History", "Active" },
+                    { new Guid("019b27c4-40b0-77a2-b4f5-85bf2ccc57d3"), new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(5315), 2, null, "Sci-fi", "Active" }
                 });
         }
 

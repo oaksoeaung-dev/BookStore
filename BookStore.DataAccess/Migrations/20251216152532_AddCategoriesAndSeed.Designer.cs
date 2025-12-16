@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251215082645_AddCategoriesAndSeed")]
+    [Migration("20251216152532_AddCategoriesAndSeed")]
     partial class AddCategoriesAndSeed
     {
         /// <inheritdoc />
@@ -57,24 +57,24 @@ namespace BookStore.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("019b211e-7d79-725c-b250-47d2dc3f9079"),
-                            CreatedAt = new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(917),
+                            Id = new Guid("019b27c4-40b0-70c7-8762-3ff661b5ac90"),
+                            CreatedAt = new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(4911),
                             DisplayOrder = 1,
                             Name = "Action",
                             RecordState = "Active"
                         },
                         new
                         {
-                            Id = new Guid("019b211e-7d79-743b-ba1b-67c50cd3e00d"),
-                            CreatedAt = new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1370),
+                            Id = new Guid("019b27c4-40b0-77a2-b4f5-85bf2ccc57d3"),
+                            CreatedAt = new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(5315),
                             DisplayOrder = 2,
                             Name = "Sci-fi",
                             RecordState = "Active"
                         },
                         new
                         {
-                            Id = new Guid("019b211e-7d79-7fc3-bbf8-1b8b29f3fce5"),
-                            CreatedAt = new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1372),
+                            Id = new Guid("019b27c4-40b0-73ef-b033-4f48ee3c444f"),
+                            CreatedAt = new DateTime(2025, 12, 16, 15, 25, 31, 696, DateTimeKind.Utc).AddTicks(5317),
                             DisplayOrder = 3,
                             Name = "History",
                             RecordState = "Active"

@@ -15,7 +15,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .HasData(
                 new Category()
                 {
-                    Id = Guid.CreateVersion7(),
                     Name = "Action",
                     DisplayOrder = 1
                 },
