@@ -1,6 +1,6 @@
-﻿using BookStoreWeb.Common;
-using BookStoreWeb.Data;
-using BookStoreWeb.Models;
+﻿using BookStore.DataAccess.Data;
+using BookStore.Models;
+using BookStore.Utility.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

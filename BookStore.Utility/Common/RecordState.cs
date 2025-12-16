@@ -1,4 +1,4 @@
-﻿namespace BookStoreWeb.Common;
+﻿namespace BookStore.Utility.Common;
 
 public enum RecordState
 {

@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="BookStore.DataAccess/BookStore.DataAccess.csproj" Id="900b4901-8652-4d96-b50a-71bcfa1c0387" />
+  <Project Path="BookStore.Models/BookStore.Models.csproj" Id="73e96941-57c2-4cd7-ac96-d04ef6c06270" />
+  <Project Path="BookStore.Utility/BookStore.Utility.csproj" Id="710e12ad-676e-48c6-980f-050da6bded0f" />
   <Project Path="BookStoreWeb/BookStoreWeb.csproj" />
 </Solution>

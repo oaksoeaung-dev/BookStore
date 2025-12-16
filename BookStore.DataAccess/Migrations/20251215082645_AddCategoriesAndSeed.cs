@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace BookStoreWeb.Migrations
+namespace BookStore.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCategoriesTableAndSeeder : Migration
+    public partial class AddCategoriesAndSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,7 +18,7 @@ namespace BookStoreWeb.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     DisplayOrder = table.Column<int>(type: "int", nullable: false),
                     RecordState = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -34,9 +34,9 @@ namespace BookStoreWeb.Migrations
                 columns: new[] { "Id", "CreatedAt", "DisplayOrder", "ModifiedAt", "Name", "RecordState" },
                 values: new object[,]
                 {
-                    { new Guid("019b1764-de89-7041-9480-e929bce37644"), new DateTime(2025, 12, 13, 11, 7, 25, 193, DateTimeKind.Utc).AddTicks(6483), 1, null, "Action", "Active" },
-                    { new Guid("019b1764-de89-72f4-8f68-2cc968d1cdb2"), new DateTime(2025, 12, 13, 11, 7, 25, 193, DateTimeKind.Utc).AddTicks(6888), 3, null, "History", "Active" },
-                    { new Guid("019b1764-de89-7e46-83f2-b22fabd14427"), new DateTime(2025, 12, 13, 11, 7, 25, 193, DateTimeKind.Utc).AddTicks(6886), 2, null, "Sci-fi", "Active" }
+                    { new Guid("019b211e-7d79-725c-b250-47d2dc3f9079"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(917), 1, null, "Action", "Active" },
+                    { new Guid("019b211e-7d79-743b-ba1b-67c50cd3e00d"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1370), 2, null, "Sci-fi", "Active" },
+                    { new Guid("019b211e-7d79-7fc3-bbf8-1b8b29f3fce5"), new DateTime(2025, 12, 15, 8, 26, 44, 985, DateTimeKind.Utc).AddTicks(1372), 3, null, "History", "Active" }
                 });
         }
 

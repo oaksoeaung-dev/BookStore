@@ -1,8 +1,8 @@
-﻿using BookStoreWeb.Common;
-using BookStoreWeb.Models;
+﻿using BookStore.Models;
+using BookStore.Utility.Common;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStoreWeb.Data;
+namespace BookStore.DataAccess.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
@@ -15,15 +15,19 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .HasData(
                 new Category()
                 {
-                    Name = "Action", DisplayOrder = 1
+                    Id = Guid.CreateVersion7(),
+                    Name = "Action",
+                    DisplayOrder = 1
                 },
                 new Category()
                 {
-                    Name = "Sci-fi", DisplayOrder = 2
+                    Name = "Sci-fi",
+                    DisplayOrder = 2
                 },
                 new Category()
                 {
-                    Name = "History", DisplayOrder = 3
+                    Name = "History",
+                    DisplayOrder = 3
                 }
             );
         modelBuilder.Entity<Category>().Property<RecordState>("RecordState").HasConversion<string>().HasMaxLength(50);

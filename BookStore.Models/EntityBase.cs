@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BookStore.Utility.Common;
+using System.ComponentModel.DataAnnotations;
 
-namespace BookStoreWeb.Common;
+namespace BookStore.Models;
 
 public abstract class EntityBase
 {
